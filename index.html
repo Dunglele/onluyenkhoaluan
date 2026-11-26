@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Hiểu để bảo vệ · Ôn tập luận án</title>
+  <link rel="stylesheet" href="on_tap_luan_an.css">
+  <script src="on_tap_luan_an.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Đến câu hỏi</a>
+  <header class="masthead wrap">
+    <a class="brand" href="on_tap_luan_an.html" aria-label="Trang ôn tập luận án"><span class="brand-mark" aria-hidden="true">H.</span><span>SỔ TAY BẢO VỆ<span class="brand-sub">Smart Attendance · Bản ôn tập cục bộ</span></span></a>
+    <a class="help-link" href="#guide">Cách học <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">TỪ HIỂU HỆ THỐNG ĐẾN GIẢI THÍCH LỰA CHỌN</p><h1 id="page-title">Hiểu để <em>bảo vệ.</em></h1><p class="intro">Tự giải thích luồng xử lý, tìm điểm có thể sai, rồi đối chiếu với mã nguồn. Mỗi câu hỏi là một bước hiểu sâu hơn luận án của bạn.</p></div>
+      <div class="hero-index"><span class="edition">BỘ CÂU HỎI / 01</span><div class="big-number" id="question-count">60</div><span>câu hỏi có giải thích</span><div class="mini-stats"><span><strong id="mcq-count">40</strong> trắc nghiệm</span><span><strong id="oral-count">20</strong> phản biện</span></div></div>
+    </section>
+    <section class="progress-strip" aria-label="Tiến độ tự đánh giá"><div><span class="status-dot" aria-hidden="true"></span><strong id="mastery-text">0 / 60 câu đã hiểu</strong><span class="muted"> theo tự đánh giá</span></div><progress id="mastery" max="60" value="0" aria-label="Số câu tự đánh giá đã hiểu"></progress><span id="practice-total">Chưa có lượt luyện tập</span></section>
+    <nav class="mode-tabs" aria-label="Chế độ học"><button type="button" data-mode="study" aria-current="page"><span>01</span> Học & hiểu</button><button type="button" data-mode="practice"><span>02</span> Luyện trắc nghiệm</button><button type="button" data-mode="defense"><span>03</span> Tập bảo vệ</button></nav>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Bộ lọc câu hỏi">
+        <div class="sidebar-heading"><h2>Lộ trình của bạn</h2><span id="filtered-count"></span></div>
+        <label for="search">Tìm câu hỏi</label><input id="search" type="search" placeholder="Ví dụ: JEV, ngưỡng, MongoDB…" autocomplete="off">
+        <label for="topic">Chủ đề</label><select id="topic"><option value="all">Tất cả chủ đề</option></select>
+        <label for="difficulty">Mức độ</label><select id="difficulty"><option value="all">Tất cả mức độ</option><option value="1">Nền tảng</option><option value="2">Vận dụng</option><option value="3">Phản biện</option></select>
+        <label for="learning">Mức hiểu</label><select id="learning"><option value="all">Tất cả câu hỏi</option><option value="new">Chưa tự đánh giá</option><option value="review">Cần ôn lại</option><option value="understood">Đã hiểu</option></select>
+        <label class="check"><input type="checkbox" id="bookmarks-only">Chỉ câu đã lưu</label>
+        <button class="text-button" id="clear-filters" type="button">Bỏ bộ lọc</button>
+        <p class="small muted" id="filter-note">Bộ lọc áp dụng cho cả ba chế độ.</p>
+        <div class="learning-note"><span class="eyebrow">MỘT THÓI QUEN TỐT</span><p>Đừng chỉ chọn đúng.<br>Hãy giải thích vì sao ba phương án còn lại không phù hợp.</p></div>
+      </aside>
+      <section id="workspace" class="workspace" tabindex="-1" aria-label="Không gian học"></section>
+    </div>
+    <section id="guide" class="guide" aria-labelledby="guide-title"><div><p class="eyebrow">HỌC CHẬM MỘT NHỊP, NHỚ SÂU HƠN</p><h2 id="guide-title">Ba bước cho mỗi câu hỏi</h2></div><ol><li><strong>Nói bằng lời của mình.</strong> Nêu quyết định, nguyên nhân và một tình huống thất bại trước khi xem gợi ý.</li><li><strong>Đối chiếu & truy ngược.</strong> Đọc giải thích, mở đường dẫn nguồn để kiểm tra hành vi hiện tại.</li><li><strong>Thử phản biện.</strong> Trả lời câu hỏi tiếp nối, rồi tự đánh giá mức hiểu. “Đã hiểu” không phải điểm kiểm định tự động.</li></ol></section>
+    <footer><div><strong>Mở trực tiếp, học ngoại tuyến.</strong><p>Giữ ba tệp HTML, CSS và JS cạnh nhau; mở <code>on_tap_luan_an.html</code> bằng trình duyệt. Không cần chạy hệ thống chấm công. Liên kết mã nguồn cần giữ cấu trúc thư mục hiện tại.</p><p>Nội dung đối chiếu mã nguồn tại thời điểm tạo; ngưỡng cấu hình không phải độ chính xác thực nghiệm. Đây là gợi ý lập luận, không phải đáp án duy nhất cho mọi thiết kế.</p></div><div class="storage-panel"><label class="check"><input type="checkbox" id="save-local">Lưu tiến độ trên trình duyệt này</label><p class="small" id="storage-message">Tùy chọn. Chỉ lưu dấu trang, mức hiểu và điểm luyện tập; không gửi dữ liệu lên mạng. Bản nháp trả lời chỉ nằm trong phiên học.</p><button class="text-button" id="reset-progress" type="button">Đặt lại tiến độ</button></div></footer>
+    <noscript><p class="empty">Hãy bật JavaScript để sử dụng câu hỏi và luyện tập. Trang hoạt động hoàn toàn ngoại tuyến.</p></noscript>
+  </main>
+  <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
+</body>
+</html>
